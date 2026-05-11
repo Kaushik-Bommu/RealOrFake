@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>How It Works - RealOrFake?</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "primary": "#75708C",
+                                                "on-primary": "#ffffff",
+                                                "primary-container": "#BFC7DE",
+                                                "on-primary-container": "#010101",
+                                                "secondary": "#C59594",
+                                                "on-secondary": "#ffffff",
+                                                "secondary-container": "#C7DBF7",
+                                                "on-secondary-container": "#010101",
+                                                "surface": "rgba(255, 255, 255, 0.4)",
+                                                "on-surface": "#010101",
+                                                "surface-variant": "rgba(255, 255, 255, 0.6)",
+                                                "on-surface-variant": "#010101",
+                                                "outline": "#75708C",
+                                                "outline-variant": "rgba(117, 112, 140, 0.3)",
+                                                "background": "#C7DBF7",
+                                                "on-background": "#010101",
+                                                "surface-container-lowest": "rgba(255, 255, 255, 0.5)",
+                                                "surface-container-low": "rgba(255, 255, 255, 0.6)",
+                                                "surface-container": "rgba(255, 255, 255, 0.7)",
+                                                "surface-container-high": "rgba(255, 255, 255, 0.8)",
+                                                "surface-container-highest": "rgba(255, 255, 255, 0.9)",
+                                                "error": "#ba1a1a"
+                                        },
+                                        "backgroundImage": {
+                                                "main-gradient": "linear-gradient(to bottom, #C7DBF7 0%, #BFC7DE 50%, #C59594 100%)"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "gutter": "24px",
+                                                "container-max": "800px",
+                                                "margin-page": "32px",
+                                                "target-min": "56px",
+                                                "unit": "8px"
+                                        },
+                                        "fontFamily": {
+                                                "h1": ["Poppins", "sans-serif"],
+                                                "body-md": ["Poppins", "sans-serif"],
+                                                "h3": ["Poppins", "sans-serif"],
+                                                "button": ["Poppins", "sans-serif"],
+                                                "h2": ["Poppins", "sans-serif"],
+                                                "label-lg": ["Poppins", "sans-serif"],
+                                                "body-lg": ["Poppins", "sans-serif"]
+                                        },
+                                        "fontSize": {
+                                                "h1": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "h3": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "1.4",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "button": [
+                                                        "20px",
+                                                        {
+                                                                "lineHeight": "1.0",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "h2": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "1.3",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "1.0",
+                                                                "letterSpacing": "0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "22px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                body {
+                        font-family: 'Poppins', sans-serif;
+                }
+
+                .material-symbols-outlined {
+                        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                }
+        </style>
+</head>
+
+<body
+        class="bg-main-gradient text-[#010101] font-body-md min-h-screen flex flex-col overflow-y-scroll bg-fixed bg-no-repeat relative">
+        <header
+                class="bg-white/40 backdrop-blur-md border-b border-white/30 w-full top-0 h-24 sticky z-50 flex items-center">
+                <nav
+                        class="flex justify-between items-center w-full max-w-[1280px] mx-auto px-gutter md:px-margin-page h-full gap-4">
+                        <div class="flex items-center gap-2">
+                                <img alt="RealOrFake? Logo" class="h-10 w-10 object-contain rounded-full shadow-sm"
+                                        src="./logo.png" />
+                                <a class="font-h2 text-h2 font-bold text-primary dark:text-primary-fixed"
+                                        href="index.html">RealOrFake?</a>
+                        </div>
+                        <ul class="hidden lg:flex gap-10 items-center justify-center flex-grow">
+                                <li><a class="font-label-lg text-label-lg text-[#010101] hover:opacity-70 transition-colors block"
+                                                href="index.html">Home</a></li>
+                                <li><a class="font-label-lg text-label-lg text-[#010101] font-medium hover:opacity-70 transition-all"
+                                                href="how-it-works.html">How it works</a></li>
+                                <li><a class="font-label-lg text-label-lg text-[#010101] hover:opacity-70 transition-colors block"
+                                                href="history.html">History</a></li>
+                                <li><a class="font-label-lg text-label-lg text-[#010101] hover:opacity-70 transition-colors block"
+                                                href="#">About</a></li>
+                                <li><a class="font-label-lg text-label-lg text-[#010101] hover:opacity-70 transition-colors block"
+                                                href="#">Contact Us</a></li>
+                        </ul>
+                        <button onclick="window.location.href='detect.html'"
+                                class="hidden md:flex items-center justify-center bg-[#C7DBF7] text-[#010101] font-button text-button h-12 px-8 rounded-full hover:bg-white hover:shadow-md transition-all focus:outline-none focus:ring-4 focus:ring-primary flex-shrink-0">
+                                Login
+                        </button>
+                        <button id="mobile-menu-btn"
+                                class="flex items-center justify-center p-2 text-[#010101] hover:bg-white/40 rounded-full focus:outline-none focus:ring-4 focus:ring-secondary lg:hidden">
+                                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+                        </button>
+                </nav>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden lg:hidden absolute top-24 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex flex-col items-center py-6 gap-6 z-40">
+                        <a class="font-label-lg text-[#010101] hover:opacity-70" href="index.html">Home</a>
+                        <a class="font-label-lg text-[#010101] hover:opacity-70" href="how-it-works.html">How it works</a>
+                        <a class="font-label-lg text-[#010101] hover:opacity-70" href="history.html">History</a>
+                        <a class="font-label-lg text-[#010101] hover:opacity-70" href="#">About</a>
+                        <a class="font-label-lg text-[#010101] hover:opacity-70" href="#">Contact Us</a>
+                        <button onclick="window.location.href='detect.html'" class="bg-[#C7DBF7] text-[#010101] font-button text-button h-12 px-8 rounded-full hover:bg-white transition-all w-3/4 max-w-xs">Login</button>
+                </div>
+        </header>
+        <!-- Main Content Canvas -->
+        <main class="flex-grow max-w-container-max mx-auto w-full px-margin-page py-16 flex flex-col gap-16">
+                <!-- Page Header -->
+                <section class="text-center space-y-4">
+                        <h1 class="font-h1 text-[48px] font-medium text-[#010101]">Understanding the Process</h1>
+                        <p class="font-body-lg text-lg text-[#010101]/80 max-w-2xl mx-auto">We use advanced technology
+                                to verify images. Follow these three simple steps to check your photos.</p>
+                </section>
+                <!-- Steps Container -->
+                <section class="flex flex-col gap-8 w-full max-w-3xl mx-auto">
+                        <!-- Step 1 Card -->
+                        <article class="bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow duration-300 flex flex-col md:flex-row items-center gap-8 relative group focus-within:ring-4 focus-within:ring-secondary focus-within:outline-none"
+                                tabindex="0">
+                                <div
+                                        class="flex-shrink-0 bg-[#C7DBF7]/60 text-[#010101] w-24 h-24 rounded-full flex items-center justify-center shadow-sm">
+                                        <span class="material-symbols-outlined"
+                                                style="font-size: 48px; font-variation-settings: 'FILL' 1;">add_a_photo</span>
+                                </div>
+                                <div class="flex-grow text-center md:text-left space-y-2">
+                                        <h2
+                                                class="font-h2 text-[32px] font-medium text-[#010101] flex items-center justify-center md:justify-start gap-3">
+                                                <span
+                                                        class="bg-[#C7DBF7] text-[#010101] text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">1</span>
+                                                Upload or Snap
+                                        </h2>
+                                        <p class="font-body-lg text-lg text-[#010101]/80">Select an image from your
+                                                device or take a new photo directly using your camera. We accept common
+                                                formats like JPEG and PNG.</p>
+                                </div>
+                        </article>
+                        <!-- Step 2 Card -->
+                        <article class="bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow duration-300 flex flex-col md:flex-row items-center gap-8 relative group focus-within:ring-4 focus-within:ring-secondary focus-within:outline-none"
+                                tabindex="0">
+                                <div
+                                        class="flex-shrink-0 bg-[#BFC7DE]/60 text-[#010101] w-24 h-24 rounded-full flex items-center justify-center shadow-sm">
+                                        <span class="material-symbols-outlined"
+                                                style="font-size: 48px; font-variation-settings: 'FILL' 1;">memory</span>
+                                </div>
+                                <div class="flex-grow text-center md:text-left space-y-2">
+                                        <h2
+                                                class="font-h2 text-[32px] font-medium text-[#010101] flex items-center justify-center md:justify-start gap-3">
+                                                <span
+                                                        class="bg-[#BFC7DE] text-[#010101] text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">2</span>
+                                                AI Analysis
+                                        </h2>
+                                        <p class="font-body-lg text-lg text-[#010101]/80">Our secure system analyzes the
+                                                visual data, looking for inconsistencies, digital artifacts, and
+                                                manipulation patterns common in fake images.</p>
+                                </div>
+                        </article>
+                        <!-- Step 3 Card -->
+                        <article class="bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow duration-300 flex flex-col md:flex-row items-center gap-8 relative group focus-within:ring-4 focus-within:ring-secondary focus-within:outline-none"
+                                tabindex="0">
+                                <div
+                                        class="flex-shrink-0 bg-[#C59594]/60 text-white w-24 h-24 rounded-full flex items-center justify-center shadow-sm">
+                                        <span class="material-symbols-outlined"
+                                                style="font-size: 48px; font-variation-settings: 'FILL' 1;">fact_check</span>
+                                </div>
+                                <div class="flex-grow text-center md:text-left space-y-2">
+                                        <h2
+                                                class="font-h2 text-[32px] font-medium text-[#010101] flex items-center justify-center md:justify-start gap-3">
+                                                <span
+                                                        class="bg-[#C59594] text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">3</span>
+                                                Get Results
+                                        </h2>
+                                        <p class="font-body-lg text-lg text-[#010101]/80">Receive a clear,
+                                                easy-to-understand report detailing the likelihood of manipulation,
+                                                helping you make informed decisions about the image.</p>
+                                </div>
+                        </article>
+                </section>
+                <!-- Call to Action Area -->
+                <section
+                        class="mt-12 text-center bg-white/20 backdrop-blur-md rounded-2xl p-8 border border-white/40 max-w-3xl mx-auto w-full">
+                        <h3 class="font-h3 text-[24px] font-medium text-[#010101] mb-6">Ready to check an image?</h3>
+                        <button
+                                class="bg-[#75708C] text-white font-button text-button w-full md:w-auto px-8 h-16 rounded-full hover:bg-[#5a566e] transition-all shadow-md focus:outline-none focus:ring-4 focus:ring-secondary inline-flex items-center justify-center gap-3">
+                                <span class="material-symbols-outlined">upload_file</span>
+                                Start Verification
+                        </button>
+                </section>
+        </main>
+        <!-- Floating Help Button -->
+        <button aria-label="Get Help"
+                class="fixed bottom-8 right-8 bg-[#C7DBF7] text-[#010101] w-16 h-16 rounded-full shadow-lg hover:bg-white transition-colors flex items-center justify-center focus:outline-none z-40">
+                <span class="material-symbols-outlined" style="font-size: 32px;">help_outline</span>
+        </button>
+        <footer class="bg-transparent w-full py-12 mt-16 border-t border-[#75708C]/20">
+                <div
+                        class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-page w-full gap-gutter">
+                        <div class="mb-6 md:mb-0 text-center md:text-left">
+                                <a class="font-h3 text-h3 font-bold text-[#010101] mb-2 block"
+                                        href="index.html">RealOrFake?</a>
+                                <p class="font-body-md text-body-md text-[#010101]/80">© 2024 RealOrFake? Designed
+                                        for clarity and safety.</p>
+                        </div>
+                        <ul class="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center text-center">
+                                <li><a class="font-body-md text-body-md text-[#010101]/80 hover:text-[#010101] hover:underline transition-colors duration-200"
+                                                href="#">Privacy Policy</a></li>
+                                <li><a class="font-body-md text-body-md text-[#010101]/80 hover:text-[#010101] hover:underline transition-colors duration-200"
+                                                href="#">Terms of Service</a></li>
+                                <li><a class="font-body-md text-body-md text-[#010101]/80 hover:text-[#010101] hover:underline transition-colors duration-200"
+                                                href="#">Help Center</a></li>
+                                <li><a class="font-body-md text-body-md text-[#010101]/80 hover:text-[#010101] hover:underline transition-colors duration-200"
+                                                href="#">Accessibility</a></li>
+                        </ul>
+                </div>
+        </footer>
+        <script type="module" src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Vite cache
+.vite/
+
+# Python cache (if using Python backend later)
+__pycache__/
+*.pyc
+
+# Model files (optional if huge)
+*.onnx
+*.pt
+*.pth
