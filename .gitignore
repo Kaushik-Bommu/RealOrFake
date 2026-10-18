@@ -1,27 +1,31 @@
-# Dependencies
+# JavaScript artifacts
 node_modules/
-
-# Build files
 dist/
+.vite/
 
-# Environment variables
+# Private configurations and local Python builds
 .env
-
-# Logs
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
 *.log
-
-# OS files
 .DS_Store
 Thumbs.db
 
-# Vite cache
-.vite/
-
-# Python cache (if using Python backend later)
-__pycache__/
-*.pyc
-
-# Model files (optional if huge)
+# Never commit private or third-party datasets or unverified model weights
+dataset/
+raw_dataset/
+data/
+runs/
+model/*.onnx
+model/*.pt
+model/*.pth
+model/*.ckpt
+model/metrics.json
 *.onnx
 *.pt
 *.pth
