@@ -1,0 +1,5 @@
+-r requirements.txt
+# Install a compatible CUDA-enabled PyTorch build separately for your GPU, if needed.
+torch>=2.2,<3
+torchvision>=0.17,<1
+onnx>=1.15,<2
